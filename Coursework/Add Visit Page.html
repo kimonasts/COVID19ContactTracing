@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <!--Add Visit Page-->
+    <head>
+        <title>Add Visit Page</title>
+        <link rel="stylesheet" type="text/css" href="Home&AddVisit Page styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <h2 style="font-size: 40px; font-family: Arial, Helvetica, sans-serif;"><b>COVID-19 Contact Tracing</b></h2>
+        </div>
+
+        <div class="grid-container">
+            <div class="sidebar">
+                <a href="Home Page.html"><button class="nav-button" style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Home</button></a>
+                <a href="Overview Page.html"><button class="nav-button" style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Overview</button></a>
+                <a href="Add Visit Page.html"><button class="nav-button" style="background-color: rgba(132, 151, 176, 0.829); font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Add Visit</button></a>
+                <a href="Report Page.html"><button class="nav-button" style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Report</button></a>
+                <a href="Settings.html"><button class="nav-button" style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Settings</button></a>
+                <div class="button-spacer"></div>
+                <a href="Login Page.html"><button class="nav-button" style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Logout</button></a>
+            </div>
+            <div class="main-screen">
+                <div class="title" style="text-align: center;">
+                    <h2 style="height: 20px; font: 40px Arial">Add a new Visit</h2>
+                </div>
+                <hr style="background-color: black;">
+                <div class="inner-grid-container">
+                    <div class="textfields-buttons">
+                        <form>
+                            <input type="date" placeholder="Date" style="text-align: center; height: 35px; width:300px; background-color: transparent; border: 1px solid black"/><p>
+                            <input type="time" placeholder="Time" style="text-align: center; height: 35px; width:300px; background-color: transparent; border: 1px solid black"/><p>
+                            <input type="number" placeholder="Duration in minutes" style="text-align: center; height: 35px; width:297px; background-color: transparent; border: 1px solid black"/><p>
+                        </form>
+                        <div class="button-spacer2"></div>
+                        <button style="text-align: center; height: 35px; width:308px; margin-bottom: 10px; background-color: white; border: 1px solid black" onclick=addRow()>Add</button>
+                        <button style="text-align: center; height: 35px; width:308px; margin-bottom: 10px; background-color: white; border: 1px solid black">Cancel</button>
+                    </div>
+                    <div class="map">
+                        <img src="marker_black.png" id="marker" style="display: none; position: absolute; height: 40px; width: 40px;">
+                        <img class="map-of-exeter" id="map" src="exeter.jpg" alt="Map of Exeter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="Overview Page table.js"></script>
+        <script type="text/javascript">
+            document.getElementById('map').onclick = function(e)
+            {
+               with(document.getElementById('marker'))
+               {
+                   // right: 678px; top: 155px;
+                    style.left = (e.pageX - 20) + "px";
+                    style.top = (e.pageY - 40) + "px";
+
+                    style.display = 'block';
+                    // console.log("e: ", e.pageX, e.pageY);
+                    // console.log("r: ", style.top, style.left);
+
+                    console.log("x: " + parseFloat(style.left), "y: " + parseFloat(style.top));
+               }
+               // Here you forward the coordinates e.pageX, e.pageY 
+               // ... to whatever function that needs it
+            };
+        </script>
+    </body>
+</html>

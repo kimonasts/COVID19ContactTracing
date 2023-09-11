@@ -1,0 +1,34 @@
+body
+{
+    margin: auto;
+    width: auto;
+    height: 700px;
+    background-image: url("watermark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, .002);
+    background-blend-mode: lighten;
+    background-size: 650px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(173, 185, 202, 0.829); 
+}
+
+.text-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 130px 0px 110px 0px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,70 @@
+body
+{
+    margin: auto;
+    max-width: auto;
+    height: 380px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 275px 900px;
+    grid-template-areas: "sb ms";
+}
+
+.sidebar {
+    grid-area: "sb";
+    height: 678px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.main-screen {
+    grid-area: "ms";
+    height: 600px;
+    background-image: url("watermark.png");
+    background-color: rgba(255, 255, 255, .8);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 700px;
+
+    margin: 20px 30px 20px 130px;
+}
+
+.nav-button {
+    height: 50px;
+    width: 275px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.button-spacer {
+    height: 378px;
+}
+
+.inner-grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 275px 550px;
+}
+
+.textfields
+{
+    grid-area: "t";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.buttons{
+    grid-area: "b";
+}

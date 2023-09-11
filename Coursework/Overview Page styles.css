@@ -1,0 +1,63 @@
+body
+{
+    margin: auto;
+    max-width: auto;
+    height: 380px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.sidebar {
+    grid-area: "sb";
+    height: 678px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 275px 825px;
+    grid-template-areas: "sb ms";
+}
+
+.main-screen {
+    grid-area: "ms";
+    height: 600px;
+    background-image: url("watermark.png");
+    background-color: rgba(255, 255, 255, .75);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    background-size: 750px;
+
+    margin: 20px 30px 20px 30px;
+}
+
+.nav-button {
+    height: 50px;
+    width: 275px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+.button-spacer {
+    height: 378px;
+}
+
+.table{
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    /* width: 100%; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin: 25px 0px 75px 0px;
+    border-spacing: 0 20px;
+}

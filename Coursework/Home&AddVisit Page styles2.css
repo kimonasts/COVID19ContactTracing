@@ -1,0 +1,100 @@
+body
+{
+    margin: auto;
+    max-width: auto;
+    height: 380px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.text-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 275px 1000px;
+    grid-template-areas: "sb ms";
+}
+
+.sidebar {
+    grid-area: "sb";
+    height: 678px;
+    background-color: rgba(173, 185, 202, 0.829);
+}
+
+.main-screen {
+    grid-area: "ms";
+    height: 600px;
+    background-image: url("watermark.png");
+    background-color: rgba(255, 255, 255, .75);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 600px;
+
+    margin: 20px 30px 20px 30px;
+}
+
+.nav-button {
+    height: 50px;
+    width: 275px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.button-spacer {
+    height: 378px;
+}
+
+.inner-grid-container {
+    display: grid;
+    grid-template-columns: 275px 550px;
+    grid-template-areas: "t m";
+}
+
+.text {
+    grid-area: "t";
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-spacer {
+    height: 285px;
+}
+
+.map {
+    grid-area: "m";
+}
+
+.map-of-exeter {
+    margin: 0 0 0 20px;
+    width: 450px;
+    height: 450px;
+    border: 2px solid black;
+}
+
+.textfields-buttons
+{
+    grid-area: "tb";
+}
+
+.button-spacer2 {
+    height: 215px;
+}
